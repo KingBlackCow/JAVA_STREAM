@@ -1,7 +1,5 @@
 package functionalprogramming;
 
-import functionalprogramming.utils.Adder;
-
 import java.util.function.Function;
 
 /*
@@ -10,7 +8,7 @@ import java.util.function.Function;
  * 바로 리턴하는 경우 중괄호 생략 가능
  */
 
-public class Main{
+public class Chapter01_Function {
     public static void main(String[] args) {
         //1.
 //        Function<Integer, Integer> adder = new Adder();
