@@ -1,9 +1,6 @@
 package functionalprogramming.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -12,6 +9,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@RequiredArgsConstructor
 public class Order {
     private long id;
     private LocalDateTime createdAt;
@@ -28,8 +26,9 @@ public class Order {
     }
 
     @Builder
-    public Order(long id, OrderStatus orderStatus) {
+    public Order(long id, OrderStatus orderStatus, long createdByUserId) {
         this.id = id;
         this.status = orderStatus;
+        this.createdByUserId= createdByUserId;
     }
 }
