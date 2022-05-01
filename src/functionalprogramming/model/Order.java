@@ -26,14 +26,11 @@ public class Order {
     }
 
     @Builder
-    public Order(long id, OrderStatus orderStatus, long createdByUserId, LocalDateTime createdAt) {
+    public Order(long id, OrderStatus orderStatus, long createdByUserId, LocalDateTime createdAt, List<OrderLine> orderLines) {
         this.id = id;
         this.status = orderStatus;
         this.createdByUserId= createdByUserId;
         this.createdAt = createdAt;
+        this.orderLines = orderLines;
     }
-
-
-
-
 }
