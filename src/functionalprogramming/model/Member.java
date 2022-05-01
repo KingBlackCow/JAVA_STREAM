@@ -4,6 +4,7 @@ package functionalprogramming.model;
 import lombok.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Getter
 @Setter
@@ -22,5 +23,9 @@ public class Member {
         this.name = name;
         this.emailAddress = emailAddress;
         this.isVerified = isVerified;
+    }
+
+    public Optional<String> getEmailAddressOptional(){
+        return Optional.ofNullable(emailAddress);
     }
 }
