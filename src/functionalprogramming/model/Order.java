@@ -18,7 +18,7 @@ public class Order {
     private BigDecimal amount;
     private List<OrderLine> orderLines;
 
-    public enum OrderStatus{
+    public enum OrderStatus {
         CREATED,
         IN_PROGRESS,
         ERROR,
@@ -26,11 +26,12 @@ public class Order {
     }
 
     @Builder
-    public Order(long id, OrderStatus orderStatus, long createdByUserId, LocalDateTime createdAt, List<OrderLine> orderLines) {
+    public Order(long id, OrderStatus orderStatus, long createdByUserId, LocalDateTime createdAt, BigDecimal amount, List<OrderLine> orderLines) {
         this.id = id;
         this.status = orderStatus;
-        this.createdByUserId= createdByUserId;
+        this.createdByUserId = createdByUserId;
         this.createdAt = createdAt;
+        this.amount = amount;
         this.orderLines = orderLines;
     }
 }

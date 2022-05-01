@@ -3,11 +3,12 @@ package functionalprogramming.model;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
 @Getter
-@Setter
+
 @ToString
 @RequiredArgsConstructor
 public class Member {
@@ -15,6 +16,8 @@ public class Member {
     private String name;
     private String emailAddress;
     private boolean isVerified;
+    @Setter
+    private LocalDateTime createdAt;
     private List<Integer> friendMemberIds;
 
     @Builder
