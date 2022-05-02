@@ -18,6 +18,7 @@ public class Member {
     private boolean isVerified;
     @Setter
     private LocalDateTime createdAt;
+    @Setter
     private List<Integer> friendMemberIds;
 
     @Builder
