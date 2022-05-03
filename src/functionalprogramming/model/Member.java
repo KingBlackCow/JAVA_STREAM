@@ -13,8 +13,10 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class Member {
     private int id;
+    @Setter
     private String name;
     private String emailAddress;
+    @Setter
     private boolean isVerified;
     @Setter
     private LocalDateTime createdAt;
