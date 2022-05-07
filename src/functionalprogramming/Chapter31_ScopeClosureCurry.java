@@ -20,7 +20,7 @@ public class Chapter31_ScopeClosureCurry {
 
         Function<Integer, Integer> addThree = curriedAdd.apply(3);
         int result = addThree.apply(10);
-        System.out.println(result);
+        System.out.println(result );
     }
 
     private static Supplier<String> getStringSupplier() {
