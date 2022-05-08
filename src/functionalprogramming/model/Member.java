@@ -24,11 +24,12 @@ public class Member {
     private List<Integer> friendMemberIds;
 
     @Builder
-    public Member(int id, String name, String emailAddress, boolean isVerified) {
+    public Member(int id, String name, String emailAddress, boolean isVerified, List<Integer> friendMemberIds) {
         this.id = id;
         this.name = name;
         this.emailAddress = emailAddress;
         this.isVerified = isVerified;
+        this.friendMemberIds = friendMemberIds;
     }
 
     public Optional<String> getEmailAddressOptional(){
